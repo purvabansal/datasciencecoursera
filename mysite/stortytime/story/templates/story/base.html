@@ -1,0 +1,32 @@
+{% load bootstrap3 %}	
+{% load static %}
+
+<html>
+	<head>
+	<title>This is my web app!</title>
+	 {% bootstrap_css %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{% static "js/jquery.cookie/jquery.cookie.js" %}"></script>
+    {% bootstrap_javascript %}
+
+	</head>
+	<body>
+	<h1>Welcome to Searpy</h1>
+	<div class="container">
+	<div class="row">
+    <h2>Expandable when is Focus</h2>
+    <h3>Mac Search Style</h3>
+        <div class="span12">
+            <form id="custom-search-form" class="form-search form-horizontal pull-right">
+                <div class="input-append span12">
+                    <input type="text" class="search-query mac-style" placeholder="Search">
+                    <button type="submit" class="btn"><i class="icon-search"></i></button>
+                </div>
+            </form>
+        </div>
+	</div>
+</div>
+	{% block content %}
+	{% endblock %}
+	</body>
+</html>
